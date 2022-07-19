@@ -1,1 +1,39 @@
 // Código de Nav acá
+@background-color: #f3f3f3;
+@navigationBorder: 1px solid #e7e7e7;;
+@navPosition: left;
+@fontfamily: 'Ubuntu', sans-serif;
+.navbar{
+    
+    background-color: @background-color;
+    border: @navigationBorder;
+    border-width: 1px 0;
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+    margin: 50px;
+    font-family: @fontfamily;
+    font-size: 1.4rem;
+}
+.navbar ul{
+    margin:0;
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+}
+.navbar li{
+    float: @navPosition;   
+    display: inline; 
+}
+.navbar a:link, a:visited{
+    display: inline-block;
+    padding: 10px;
+    background-color: @background-color;
+    text-decoration: none;
+    color: black;
+
+}
+li a:hover{
+    background-color: darkgray;
+}
