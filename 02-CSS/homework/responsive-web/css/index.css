@@ -1,3 +1,24 @@
+.singUp-button {
+  color: whitesmoke;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4rem;
+  background-color: #070729;
+  box-sizing: border-box;
+}
+.btn {
+  color: whitesmoke;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4rem;
+  background-color: #070729;
+  box-sizing: border-box;
+  padding: 3px;
+  margin: 3px;
+  text-align: center;
+  font-weight: bold;
+  outline: solid;
+  border-radius: 3px;
+  display: inline-block;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -162,14 +183,16 @@ p {
 }
 .navbar {
   background-color: #f3f3f3;
-  border: 1px solid #e7e7e7;
+  border: 1px double #e0e0e0;
   border-width: 1px 0;
   list-style: none;
   text-align: center;
   padding: 20px;
-  margin: 50px;
+  margin: 5px;
+  justify-content: center;
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.4rem;
+  font-weight: bold;
 }
 .navbar ul {
   margin: 0;
@@ -188,10 +211,10 @@ a:visited {
   padding: 10px;
   background-color: #f3f3f3;
   text-decoration: none;
-  color: black;
+  color: #22283B;
 }
 li a:hover {
-  background-color: darkgray;
+  background-color: #796363;
 }
 footer {
   color: #22283B;
@@ -244,6 +267,9 @@ footer {
 }
 .home .actual .actual-text p {
   margin-bottom: 26px;
+}
+.home .actual .actual-text .btn {
+  border-radius: 20px;
 }
 .home .actual .actual-img {
   width: 46%;

@@ -1,1 +1,18 @@
 // Mixins acá
+.singUp-button{
+    color:whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.4rem;
+    background-color: #070729;
+    box-sizing: border-box;
+}
+.btn{
+    .singUp-button();
+    padding: 3px;
+    margin: 3px;
+    text-align: center;
+    font-weight: bold;
+    outline: solid;
+    border-radius: 3px;
+    display: inline-block;
+}
