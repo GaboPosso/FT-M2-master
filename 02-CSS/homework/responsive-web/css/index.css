@@ -1,24 +1,3 @@
-.singUp-button {
-  color: whitesmoke;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.4rem;
-  background-color: #070729;
-  box-sizing: border-box;
-}
-.btn {
-  color: whitesmoke;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.4rem;
-  background-color: #070729;
-  box-sizing: border-box;
-  padding: 3px;
-  margin: 3px;
-  text-align: center;
-  font-weight: bold;
-  outline: solid;
-  border-radius: 3px;
-  display: inline-block;
-}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -182,24 +161,28 @@ p {
   margin: 0 auto;
 }
 .navbar {
-  background-color: #f3f3f3;
-  border: 1px double #e0e0e0;
-  border-width: 1px 0;
-  list-style: none;
-  text-align: center;
-  padding: 20px;
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 1.4rem;
-  font-weight: bold;
+  align-items: center;
+  padding: 15px;
+  background-color: #F6F6F6;
+  font-size: 15px;
+  color: #454A59;
+  text-decoration: none;
 }
 .navbar ul {
-  margin: 0;
-  display: inline-block;
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+  width: 40%;
+}
+@media (max-width: 500px) {
+  .navbar ul {
+    width: 80%;
+  }
 }
 .navbar li {
   float: left;
@@ -207,9 +190,9 @@ p {
 }
 .navbar a:link,
 a:visited {
-  display: inline-block;
+  display: flex;
   padding: 10px;
-  background-color: #f3f3f3;
+  background-color: #F6F6F6;
   text-decoration: none;
   color: #22283B;
 }
@@ -232,6 +215,11 @@ footer {
 .home .intro p {
   padding: 0 15px;
 }
+.home .intro img {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 20px;
+}
 .home .music-images {
   display: flex;
   flex-wrap: wrap;
@@ -242,6 +230,15 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .music-images .ondas,
+  .home .music-images .tecnologia {
+    display: none;
+  }
+  .home .music-images .auricular {
+    width: 100%;
+  }
 }
 .home .musica-nueva {
   padding: 15px;
@@ -259,8 +256,23 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .actual {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 .home .actual .actual-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-text {
+    width: 130%;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
 }
 .home .actual .actual-text h3 {
   margin-bottom: 10px;
@@ -269,7 +281,25 @@ footer {
   margin-bottom: 26px;
 }
 .home .actual .actual-text .btn {
-  border-radius: 20px;
+  border-radius: 8px;
+  background-color: #22283A;
+  font-weight: bold;
+  border: 1px solid black;
+  color: white;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: #5E6164;
+  color: #22283A;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-text .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 .home .actual .actual-img {
   width: 46%;
@@ -279,4 +309,12 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-img {
+    width: 130%;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding: 5px;
+  }
 }

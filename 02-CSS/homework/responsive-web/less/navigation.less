@@ -1,35 +1,31 @@
 // Código de Nav acá
-@background-color: #f3f3f3;
+@background-color: @nav-bg;
 @navigationBorder: 1px solid #e7e7e7;;
 @navPosition: left;
-@fontfamily: 'Ubuntu', sans-serif;
-.navbar{
-    
-    background-color: @background-color;
-    border: 1px double #e0e0e0;
-    border-width: 1px 0;
-    list-style: none;
-    text-align: center;
-    padding: 20px;
-    margin: 5px;
-    justify-content: center;
-    font-family: @fontfamily;
-    font-size: 1.4rem;
-    font-weight: bold;
+@fontfamily: @nav-font;
+.navbar{    
+    .flex(column, center, center);
+    padding: 15px;
+    background-color: @nav-bg;
+    font-size: 15px;
+    color: @fontfamily;
+    text-decoration: none;
 }
 .navbar ul{
-    margin:0;
-    display: inline-block;
-    list-style-type: none;
-    padding: 0;
-    overflow: hidden;
+    .flex(row, space-around, center);
+    padding-top: 10px;
+    width: 40%;
+
+    @media @phone{
+        width: 80%;
+    }
 }
 .navbar li{
     float: @navPosition;   
     display: inline; 
 }
 .navbar a:link, a:visited{
-    display: inline-block;
+    display: flex;
     padding: 10px;
     background-color: @background-color;
     text-decoration: none;
