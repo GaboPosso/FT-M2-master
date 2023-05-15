@@ -3,13 +3,17 @@ import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import characters, { Rick } from './data.js';
-
+import style from "./App.module.css";
+import NavBar from './components/NavBar';
 function App() {
    return (
-      <div className='App'>
-         <SearchBar onSearch={(characterID) => window.alert(characterID)} />
-         <Cards characters={characters} />
-         <Card
+      <div className={style.App}>
+        <NavBar>
+          <SearchBar onSearch={(characterID) => window.alert(characterID)} />
+        </NavBar>
+         
+         <Cards className="Card" characters={characters} />
+         <Card className="card"
             id={Rick.id}
             name={Rick.name}
             status={Rick.status}

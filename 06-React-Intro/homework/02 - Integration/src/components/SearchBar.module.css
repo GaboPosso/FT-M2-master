@@ -1,0 +1,11 @@
+
+.container {
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: rgba(192, 32, 220, 0.538);
+ align-items: center;
+ justify-content: center;
+
+}
