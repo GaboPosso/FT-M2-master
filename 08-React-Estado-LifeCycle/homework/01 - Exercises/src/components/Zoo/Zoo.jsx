@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Animals from "../Animals/Animals";
 // eslint-disable-next-line no-unused-vars
 import Species from "../Species/Species";
-// import styledZoo from "./Zoo.module.css";
+import styledZoo from "./Zoo.module.css";
 
 export default function Zoo() {
   /* Escribe acá tu código */
@@ -35,10 +35,11 @@ export default function Zoo() {
         animals: zoo.allAnimals.filter(animal => animal.specie === e.target.value)})}
     const handleAllSpecies =() => {setZoo({...zoo, animals: zoo.allAnimals})}
   return (
-    <div>
-      <label>Zoo Name:</label>
-      <input value={zoo.zooName} onChange={handleInputChange}/>
-      <h1>{zoo.zooName}</h1>
+    <div className={styledZoo.divContent}>
+      <label className={styledZoo.divContentTitle}>Zoo Name:
+        <input value={zoo.zooName} onChange={handleInputChange}/>
+        </label>
+      <h1 className={styledZoo.title}>{zoo.zooName}</h1>
 
       <Species species={zoo.species}
         handleAllSpecies={handleAllSpecies}
