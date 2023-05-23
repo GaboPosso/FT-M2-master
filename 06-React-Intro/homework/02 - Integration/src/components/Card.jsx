@@ -1,5 +1,5 @@
 
-export default function Card({name, status, species, gender, origin, image, onClose}) {
+export default function Card({id, name, status, species, gender, origin, image, onClose}) {
   // const {name, status, species, gender, origin, image} = props
    return (
      <div className='Cards'>
@@ -14,7 +14,7 @@ export default function Card({name, status, species, gender, origin, image, onCl
           <p>Species: {species}</p>
           <p>Gender: {gender}</p>
           <p>Origin: {origin}</p>
-          <button onClick={onClose}>X</button>
+          <button onClick={() => {onClose(id)}}>X</button>
       </div>
       </div>
    );
