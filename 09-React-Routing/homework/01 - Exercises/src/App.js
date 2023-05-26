@@ -14,11 +14,11 @@ export default function App() {
   <div>
     <NavBar/> 
     <Routes>
-      <Route path="/" Component={<Home/>} />
-      <Route path="/shipping" Component={<Shipping/>} />
-      <Route path="/discounts" Component={<Discounts/>} />
-      <Route path="/promotions" Component={<Promotions/>} /> 
-      <Route path="/cruises/:id" Component={<CardDetail/>} />
+      <Route path="/" element={<Home/>} />
+      <Route path="/shipping" element={<Shipping/>} />
+      <Route path="/discounts" element={<Discounts/>} />
+      <Route path="/promotions" element={<Promotions/>} /> 
+      <Route path="/cruises/:id" element={<CardDetail/>} />
 
     </Routes>
   </div>);

@@ -22,7 +22,7 @@ export default function NavBar() {
             </NavLink>
           </li>
           <li>
-           <NavLink to='/promotions'>
+           <NavLink to='/discounts'>
               <span>Promociones</span>
             </NavLink>
           </li>
