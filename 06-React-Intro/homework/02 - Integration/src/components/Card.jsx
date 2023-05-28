@@ -17,7 +17,7 @@ export default function Card({
         <div className="face front">
           <img src={image} alt="" />
         </div>
-
+        
         <div className="face back">
           <p>Name: {name}</p>
           <p>Status: {status}</p>
