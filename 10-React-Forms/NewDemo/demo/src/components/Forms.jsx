@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Forms = () => {
   const [forms, setForms] = useState({
@@ -7,10 +7,13 @@ const Forms = () => {
   });
   
 
+  const [errors, setErrors] = useState('');
+
   const handleFormsChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setForms({
+      ...forms,
       [name]: value
     })
   };
@@ -19,6 +22,20 @@ const Forms = () => {
     e.preventDefault();
   };
   
+  const validate = () => {
+    if(/\S+@\S+.\S+/.test(forms.email)){
+      setErrors({
+        ...errors,
+        email: ''
+      })
+    } else {
+      setErrors('El email es inválido')
+    }
+  };
+
+  useEffect(() => {
+    validate()
+  }, [forms]);
   return (
     <div>
       <form onSubmit={handlerSubmit}>
@@ -31,6 +48,7 @@ const Forms = () => {
           name="email"
           onChange={handleFormsChange}
         />
+        {errors.email !== '' ? <p>{errors.email}</p> : ''}
         <hr />
         <label htmlFor="password">Password</label>
         <input
