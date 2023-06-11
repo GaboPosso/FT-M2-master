@@ -4,7 +4,10 @@ const Nav = ({ onSearch }) => {
   return (
     <div>
       <SearchBar onSearch={onSearch} />
-
+      <Link to="/">
+        <button>LOGOUT</button>      
+      </Link>
+      
       <Link to="/about">
         <button>About</button>
       </Link>
